@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get '/students', to: 'students#index'
   resources :courses
+  resources :teachers, only: [:show, :index]
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
