@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get '/', to: 'welcome#index'
   get '/students', to: 'students#index'
   resources :courses
   resources :teachers, only: [:show, :index]
-
+  # get '/teachers/:last_name', to: 'teachers#show'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
